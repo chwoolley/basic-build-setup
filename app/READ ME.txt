@@ -1,0 +1,21 @@
+This template includes commonly used plugins:
+Enquire, 
+Fancybox, 
+Slick Slider, 
+Jquery Validate.
+
+In addition, this boilerplate includes Bourbon Neat, a handy and lightweight grid framework for SASS: http://neat.bourbon.io/
+
+Copy and paste new plugins into the plugins.js file to include them.
+Extra CSS files included via SASS @import in the /stylesheets/css/main.css file. (keep the html clean!)
+
+Icon fonts are managed in Icomoon: https://icomoon.io/app/
+
+Code guide: 
+http://codeguide.co/
+
+Grid system is Bourbon Neat: 
+http://neat.bourbon.io/
+
+Check out the Bourbon docs for useful mixins:
+http://bourbon.io/docs/

@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Bourbon Neat Grid Set up
+   ========================================================================== */
+
+$custom-grid: (
+ columns: 12,
+ gutter: 30px,
+);
+
+$custom-grid--medium: (
+  columns: 6,
+  gutter: 20px,
+  media: "(max-width: 769px)",
+);
+
+$custom-grid--small: (
+  columns: 6,
+  gutter: 20px,
+  media: "(max-width: 601px)",
+);
+
+/* ==========================================================================
+   Bourbon Neat Grid Visual Preview
+   ========================================================================== */
+   
+/* Uncomment to show the grid visual */
+/*.column-wrapper {
+  @include grid-visual(#f3eff9, $custom-grid);
+} */
+
+/* ==========================================================================
+   Bourbon Neat Columns
+   ========================================================================== */
+
+.column-wrapper {
+	max-width: 1240px;
+	margin-left: auto;
+	margin-right: auto;
+	@include grid-container;
+	.column-wrapper {
+		@include grid-collapse($custom-grid);
+		@include grid-container;
+		@include grid-media($custom-grid--medium) {
+		    @include grid-collapse($custom-grid--medium);
+		}
+	}
+	aside {
+		@include grid-column(3, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(2);
+		}
+	} // aside
+	.content-container {
+		@include grid-column(9, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(4);
+		}
+	} // content-container
+	.column-1of4 {
+		@include grid-column(3, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(3);
+		}
+		@include grid-media($custom-grid--small) {
+		    @include grid-column(6);
+		}
+	} // column-1of4
+	.column-1of3 {
+		@include grid-column(4, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(3);
+		}
+		@include grid-media($custom-grid--small) {
+		    @include grid-column(6);
+		}
+	} // column-1of3
+	.column-2of3 {
+		@include grid-column(8, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(3);
+		}
+		@include grid-media($custom-grid--small) {
+		    @include grid-column(6);
+		}
+	} // column-2of3
+	.column-1of2, .column-2of4 {
+		@include grid-column(6, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(3);
+		}
+		@include grid-media($custom-grid--small) {
+		    @include grid-column(6);
+		}
+	} // column-1of2, column-2of4
+	.column-3of4 {
+		@include grid-column(9, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(6);
+		}
+	} // column-3of4
+	.column-4of4, .column-1of1 {
+		@include grid-column(12, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+		    @include grid-column(6);
+		}
+	} // column-4of4
+} // column-wrapper
+
+
+/* ==========================================================================
+   Bourbon Neat Shift Columns
+   ========================================================================== */
+
+.column-wrapper {
+	.grid-shift-1of2 {
+		@include grid-push(6, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+			@include grid-push(0);
+		}
+	}
+
+	.grid-shift-1of3 {
+		@include grid-push(4, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+			@include grid-push(0);
+		}
+	}
+
+	.grid-shift-2of3 {
+		@include grid-push(8, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+			@include grid-push(0);
+		}
+	}
+
+	.grid-shift-1of4 {
+		@include grid-push(3, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+			@include grid-push(0);
+		}
+	}
+
+	.grid-shift-3of4 {
+		@include grid-push(9, $custom-grid);
+		@include grid-media($custom-grid--medium) {
+			@include grid-push(0);
+		}
+	}
+}

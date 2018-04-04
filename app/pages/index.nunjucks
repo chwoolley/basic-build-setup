@@ -1,0 +1,75 @@
+<!-- index.nunjucks -->
+
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+    <header>
+        <div class="column-wrapper">
+        	<a href="#" class="menu-button js-trigger-mobile-nav">
+        		<span class="burger-icon"></span>
+        	</a>
+        	<div class="column-1of1">
+        		<a href="/" class="logo">
+        			<img src="images/logo.png" alt="Born Digital">
+        		</a>
+
+
+    {% import 'macros/nav-macro.nunjucks' as nav %}
+    {{nav.active('home')}}
+
+    		</div>
+        </div>
+    </header>
+
+
+
+    <section>
+        	<div class="column-wrapper">
+
+                <div class="column-1of1">
+                        <h1>Different box types</h1>
+                        <div class="box1">
+                                <div class="box-inner1">
+                                    <p>lsdfdsfdsdsf</p>
+                                </div>
+
+                        </div>
+                        <div class="box2">
+                            <div class="box-inner2">
+                                <p>lsdfdsfdsdsf</p>
+                            </div>
+
+                        </div>
+                        <div class="box3">
+                            <div class="box-inner3">
+                                <p>lsdfdsfdsdsf</p>
+                            </div>
+                        </div>
+                        <div class="box4">
+                            <div class="box-inner4">
+
+                                <p>lsdfdsfdsdsf</p>
+                            </div>
+                        </div>
+                        <div class="box5">
+                            <div class="box-inner5">
+                                <p>lsdfdsfdsdsf</p>
+                            </div>
+                        </div>
+                        <div class="box6">
+                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
+                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
+                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
+                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
+                            <div class="box-inner6"><p>lets see if this works</p></div>
+                        </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+        {% include "partials/footer.nunjucks" %}
+{% endblock %}

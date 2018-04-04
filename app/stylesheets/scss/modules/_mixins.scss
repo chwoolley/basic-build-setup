@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin hide-text {
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+} // hide-text
+
+@mixin clear-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+} // clear-list
+
+@mixin button($button-color) {
+	color: #fff;
+	font-family: $font-stack_default;
+	font-size: $base-font-size;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	text-transform: lowercase;
+	padding: 8px 20px;
+	background-color: $button-color;
+	border: none;
+	-webkit-appearance: none;
+	border-radius: 2px;
+	@include transition(opacity .25s ease-in-out, transform .25s ease-in-out);
+	display: inline-block;
+	outline: none;
+	position: relative;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: darken($button-color, 6%);
+	} // hover
+	&:active {
+		box-shadow: none;
+	} // active
+	&:disabled {
+	  cursor: not-allowed;
+	  opacity: 0.5;
+	  background-color: $button-color;
+	}//disabled
+} // button
+
+@mixin icomoon {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

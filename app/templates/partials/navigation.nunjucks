@@ -1,0 +1,50 @@
+    
+        <nav class="main-nav" role="navigation">
+	    				<ul role="menubar">
+	    					<li role="presentation">
+	    						<a href="index.html" role="menuitem" tabindex="0">Home</a>
+	    						{# <ul class="sub-nav" role="menu">
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">About</a>
+									</li>
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">Contact</a>
+									</li>
+	    						</ul> #}
+	    					</li>
+	    					<li role="presentation">
+	    						<a href="about.html" role="menuitem" tabindex="0">About</a>
+	    						{# <ul class="sub-nav">
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">Sub nav link 2a</a>
+									</li>
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">Sub nav link 2b</a>
+									</li>
+	    						</ul> #}
+	    					</li>
+                            <li role="presentation">
+	    						<a href="work.html" role="menuitem" tabindex="0">Work</a>
+	    						{# <ul class="sub-nav">
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">Sub nav link 3a</a>
+									</li>
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">Sub nav link 3b</a>
+									</li>
+	    						</ul> #}
+	    					</li>
+
+	    					<li role="presentation">
+	    						<a href="contact.html" role="menuitem" tabindex="0">Contact</a>
+	    						{# <ul class="sub-nav">
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">Sub nav link 3a</a>
+									</li>
+									<li role="presentation">
+										<a href="" role="menuitem" tabindex="0">Sub nav link 3b</a>
+									</li>
+	    						</ul> #}
+	    					</li>
+	    			</ul>
+	    	</nav>

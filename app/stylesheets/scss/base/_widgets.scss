@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.pagination {
+	@include clear-list;
+	li {
+		display: inline;
+		a {
+			position: relative;
+			float: left;
+			padding: 6px 12px;
+			margin-left: -1px;
+			color: $brand-color;
+			text-decoration: none;
+			background-color: #fff;
+			border: 1px solid $border-color;
+			&:hover,
+			&:focus {
+				background-color: $brand-color;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Tooltips
+   ========================================================================== */
+
+   /* Add this attribute to the element that needs a tooltip */
+   [data-tooltip] {
+     position: relative;
+     z-index: 2;
+     cursor: pointer;
+   }
+
+   /* Hide the tooltip content by default */
+   [data-tooltip]:before,
+   [data-tooltip]:after {
+     visibility: hidden;
+     opacity: 0;
+     pointer-events: none;
+   }
+
+   /* Position tooltip above the element */
+   [data-tooltip]:before {
+     position: absolute;
+     bottom: 150%;
+     left: 50%;
+     margin-bottom: 5px;
+     margin-left: -80px;
+     padding: 7px;
+     width: 160px;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     border-radius: 3px;
+     background-color: #000;
+     background-color: hsla(0, 0%, 20%, 0.9);
+     color: #fff;
+     content: attr(data-tooltip);
+     text-align: center;
+     font-size: 14px;
+     line-height: 1.2;
+   }
+
+   /* Triangle hack to make tooltip look like a speech bubble */
+   [data-tooltip]:after {
+     position: absolute;
+     bottom: 150%;
+     left: 50%;
+     margin-left: -5px;
+     width: 0;
+     border-top: 5px solid #000;
+     border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+     border-right: 5px solid transparent;
+     border-left: 5px solid transparent;
+     content: " ";
+     font-size: 0;
+     line-height: 0;
+   }
+
+   /* Show tooltip content on hover */
+   [data-tooltip]:hover:before,
+   [data-tooltip]:hover:after {
+     visibility: visible;
+     opacity: 1;
+   }
+
+/* ==========================================================================
+   Admin Bar
+   ========================================================================== */
+
+#AdminBar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    //height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(0,0,0, 0.8);
+    z-index: 9999;
+    & + header{
+        @media only screen and (max-width: $breakpoint-large) {
+            padding-top: 40px;
+        } // large
+        .mobile-menu{
+        	@media only screen and (max-width: $breakpoint-smallish) {
+        		top: 30px;
+        	} // smallish
+        }
+    }
+    a{
+        color: #fff;
+        text-decoration: underline;
+    }
+    .close{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        @include transition(opacity, 0.2s, linear);
+        &:before{
+            content: "\00d7";
+            color: #fff;
+            font-size: 20px;
+        }
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+    ul{
+        @include clear-list;
+        text-align: right;
+        padding-right: 50px;
+        @media only screen and (max-width: $breakpoint-smallish) {
+            padding-right: 40px;
+        } //smallish
+        li{
+            display: inline-block;
+            color: #fff;
+            font-size: 13px;
+            margin-left: 20px;
+            &:first-child{
+                margin-left: 0;
+            }
+            &.greeting{
+                opacity: 0.8;
+            }
+            &.pipe{
+                @media only screen and (max-width: $breakpoint-smallish) {
+                    display: none;
+                } // smallish
+            }
+        }// li
+    }// ul
+}// #AdminBar

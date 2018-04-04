@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.button {
+	@include button($brand-color);
+	&.primary {
+		@include button(darken($brand-color, 10%));
+	}
+	&.secondary {
+		@include button($action-color);
+	}
+	& + .button {
+		margin-left: 10px;
+	}
+}
+

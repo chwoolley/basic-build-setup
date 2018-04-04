@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Helper Classes
+   ========================================================================== */
+
+.mobile-show {
+	display: none !important;
+	@media only screen and (max-width: $breakpoint-smallish) {
+		display: block !important;
+	} // smallish
+} // mobile-show
+
+.mobile-hide {
+	@media only screen and (max-width: $breakpoint-smallish) {
+		display: none !important;
+	} // smallish
+} // mobile-hide
+
+.tablet-show {
+	display: none !important;
+	@media only screen and (max-width: $breakpoint-large) {
+		display: block !important;
+	} // large
+} // tablet-show
+
+.tablet-hide {
+	@media only screen and (max-width: $breakpoint-large) {
+		display: none !important;
+	} // large
+} // tablet-hide
+
+.responsive-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	iframe, object {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	} // iframe, object
+} // responsive-container
+
+.hide {
+	display: none;
+} // hide
+
+.clearfix {
+	@include grid-container;
+}

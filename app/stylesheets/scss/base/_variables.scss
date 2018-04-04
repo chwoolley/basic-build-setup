@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+// Typography
+$font-stack_default: Arial, Helvetica, sans-serif;
+$font-stack_brand: 'Proxima Nova', sans-serif;
+
+// Font Sizes
+$base-font-size: 1rem;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 2rem;
+$small-spacing: $base-line-height * 1rem;
+$base-z-index: 0;
+
+// Colors
+$base-color: #000; /**/
+$brand-color: #00aeef; /**/
+$action-color: red; /**/
+$highlight-color: yellow; /**/
+
+// Border
+$border-color: #dddddd;
+
+// Background Colors
+$background-color: #f7f7f7; /**/
+$secondary-background-color: lighten($background-color, 10%);
+
+// Breakpoints
+$breakpoint-largest: 1275px;
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-smallish: 600px;
+$breakpoint-small: 480px;

@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+fieldset {
+	background: $background-color;
+	border: 1px solid $border-color;
+	margin: 0;
+	margin-bottom: 16px;
+	padding: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	&.error {
+		color: $highlight-color;
+	}
+}
+
+input[type="date"],	
+input[type="datetime-local"],	
+input[type="email"],	
+input[type="file"],		
+input[type="month"],	
+input[type="number"],	
+input[type="password"],	
+input[type="search"],
+input[type="tel"],	
+input[type="text"],	
+input[type="time"],	
+input[type="url"],	
+input[type="week"],
+select,
+textarea {
+	padding:10px;
+	line-height: auto;
+	background-color: #ffffff;
+	border: 1px solid $border-color;
+	width: 100%;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+textarea {
+	height: 200px;
+	resize: vertical;
+}
+
+/* Customised Select Boxes */
+select:not([multiple]) {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		// Allows us to use a custom arrow and avoid
+		// the browsers that don't support it.
+		-webkit-appearance: none;
+		appearance: none;
+		cursor: pointer;
+		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxNjAwcHgiIGhlaWdodD0iNjQwcHgiIHZpZXdCb3g9IjAgMCAxNjAwIDY0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTYwMCA2NDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnIGlkPSJpY29tb29uLWlnbm9yZSI+PC9nPjxwYXRoIGQ9Ik01NTcuMzc2LDE5NS40ODhjOC43MDQtOC41NzYsMjIuNjg4LTguNTc2LDMxLjMyOCwwYzguNjQsOC41NzYsOC42NzIsMjIuNDMyLDAsMzEuMDA4bC0yNTMuMDU2LDI1MC41NmMtOC42NDEsOC41NzYtMjIuNjI1LDguNTc2LTMxLjMyOSwwTDUxLjI2NCwyMjYuNDk2Yy04LjY0LTguNTc2LTguNjQtMjIuNDMyLDAtMzEuMDA4YzguNjcyLTguNTc2LDIyLjY4OC04LjU3NiwzMS4zMjgsMEwzMjAsNDI0TDU1Ny4zNzYsMTk1LjQ4OHoiLz48L3N2Zz4=);
+		background-position: right 0 top 50%;
+		background-repeat: no-repeat;
+		background-size: 30px;
+	}
+}
+
+/* Custom checkboxes and Radios */
+input[type="checkbox"],
+input[type="radio"] {
+	position: absolute;
+	left: -9999px;
+	&+ label{
+		position: relative;
+		display: block;
+		padding-left: 2em;
+		cursor: pointer;
+		// Checkbox setup
+		&:before{
+			display: block;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1.2em; 
+			height: 1.2em;
+			border: 2px solid $border-color;
+			background-color: #ffffff;
+		}
+	}
+	// Checked
+	&:checked + label {
+		&:before {
+			/* Tick inline SVG graphic */
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9Ijc2OCIgaGVpZ2h0PSI3NjgiIHZpZXdCb3g9IjAgMCA3NjggNzY4Ij48dGl0bGU+PC90aXRsZT48ZyBpZD0iaWNvbW9vbi1pZ25vcmUiPjwvZz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMjg4IDUxNy41bDMzOS0zMzkgNDUgNDUtMzg0IDM4NC0xNzguNS0xNzguNSA0NS00NXoiPjwvcGF0aD48L3N2Zz4=);
+			background-repeat: no-repeat;
+			background-size: 1.1em;
+			background-position: center;
+		}
+	}
+	// Disabled
+	&:disabled {
+		& + label {
+		cursor: not-allowed;
+
+		&:before{
+			background-color: darken($border-color, 2%);
+			border-color: darken($border-color, 10%);
+			opacity: 0.3;
+			}
+		}
+	}
+} //checkbox, radio
+
+input[type="radio"] {
+	&+ label{
+		&:before{
+			border-radius: 100%;
+		}
+	}
+	// Checked
+	&:checked + label {
+		&:before {
+			background-image: none;
+			background-color: $brand-color;
+			box-shadow: inset 0 0 0 0.3em #ffffff;
+		}
+	}
+	// Disabled
+	&:disabled {
+		& + label {
+		&:before{
+			box-shadow: inset 0 0 0 0.3em darken($border-color, 2%);
+			}
+		}
+	}
+} //radio

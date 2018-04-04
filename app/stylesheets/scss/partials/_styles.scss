@@ -1,0 +1,246 @@
+/*//////////////////////////////////////////////////////////////////////////////
+//  Styles
+//////////////////////////////////////////////////////////////////////////////*/
+
+/*
+TABLE OF CONTENTS
+
+01 - Reset
+02 - Global
+03 - General Layout
+04 - Header
+05 - Content
+06 - Sidebar
+07 - Footer
+08 - Media Queries
+*/
+
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  01 - Reset
+//////////////////////////////////////////////////////////////////////////////*/
+// See scss/_normalize.scss
+
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  02 - Global
+//////////////////////////////////////////////////////////////////////////////*/
+
+* {
+	box-sizing: border-box;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  03 - General Layout
+//////////////////////////////////////////////////////////////////////////////*/
+
+body {
+	&.lock-scroll {
+		height: 100%;
+		overflow: hidden;
+		
+	}
+	
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  04 - Header
+//////////////////////////////////////////////////////////////////////////////*/
+
+header {
+	background-color: #333;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
+	.column-1of1 {
+		display: flex;
+		align-items: center;
+		@media only screen and (max-width: $breakpoint-medium) {
+			display: block;
+		} // medium
+	}
+}
+
+.logo {
+	display: block;
+	max-width: 66px;
+	float: left;
+	@media only screen and (max-width: $breakpoint-medium) {
+		float: none;
+	} // medium
+	img {
+		display: flex;
+	}
+}
+
+.main-nav {
+	float: left;
+	text-align: right;
+	width: calc(100% - 66px);
+	@media only screen and (max-width: $breakpoint-medium) {
+		/* Hide menu on smaller screens */
+		display: none;
+		float: none;
+		text-align: left;
+		margin-top: 40px;
+	} // medium
+	@media only screen and (min-width: $breakpoint-medium + 1) {
+		/* 
+		* Show menu on larger screens  
+		* Use !important to override javascript show and hide
+		*/
+		display: block !important;
+	} // medium
+	ul {
+		@include clear-list;
+	}
+	li {
+		display: inline-block;
+		margin-left: 40px;
+		position: relative;
+		@media only screen and (max-width: $breakpoint-medium) {
+			display: block;
+			margin-left: 0;
+		} // medium
+		&:hover,
+		&:focus,
+		&:focus-within {
+			.sub-nav {
+				display: block;
+			}
+		}
+	}
+	a {
+		color: #ffffff;
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			color: rgba(255,255,255, 0.8);
+		}
+	}
+
+	.sub-nav {
+		display: none;
+		width: 200px;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -100px;
+		text-align: center;
+		padding: 10px 0 0 0;
+		@media only screen and (max-width: $breakpoint-medium) {
+			display: block;
+			position: static;
+			margin: 10px 0 20px 20px;
+		} // medium
+		li {
+			display: block;
+			margin: 0;
+			&:first-child {
+				&:after {
+					@media only screen and (min-width: $breakpoint-medium + 1) {
+						/* CSS Arrow */
+						bottom: 100%;
+						left: 50%;
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+						border-color: rgba(lighten($brand-color, 20%), 0);
+						border-bottom-color: lighten($brand-color, 20%);
+						border-width: 8px;
+						margin-left: -8px;
+					} // medium
+				}
+			}
+		}
+		a {
+			color: #ffffff;
+			display: block;
+			padding: 10px;
+			background-color: lighten($brand-color, 20%);
+			border-bottom:1px solid darken($brand-color, 6%);
+			@media only screen and (max-width: $breakpoint-medium) {
+				padding: 0;
+				background: transparent;
+				border: none;
+			} // medium
+			&:hover,
+			&:focus {
+				color: #ffffff;
+				background-color: lighten($brand-color, 10%);
+			}
+		}
+	}
+} //main-nav
+
+.active {
+	font-weight: 600;
+}
+
+
+.menu-button {
+	display: none;
+	padding: 10px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	bottom: 20px;
+	margin: auto;
+	height: 40px;
+	@media only screen and (max-width: $breakpoint-medium) {
+		display: block;
+	} // medium
+}
+
+.burger-icon {
+	@include burger(25px, 3px, 5px, #ffffff);
+}
+
+.menu-button.is-active .burger-icon {
+	@include burger-to-cross;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  05 - Content
+//////////////////////////////////////////////////////////////////////////////*/
+
+section {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  06 - Sidebar
+//////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  07 - Footer
+//////////////////////////////////////////////////////////////////////////////*/
+
+footer {
+	background: $background-color;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	p {
+		font-size: 0.8em;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//  08 - Media Queries
+//////////////////////////////////////////////////////////////////////////////*/
+
+// Let's avoid using these and keep responsive styling adjustments inline (assigned within the affected element)
+@media only screen and (max-width: $breakpoint-large) {} // large
+@media only screen and (max-width: $breakpoint-medium) {} // medium
+@media only screen and (max-width: $breakpoint-smallish) {} // smallish
+@media only screen and (max-width: $breakpoint-small) {} // small

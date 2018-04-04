@@ -1,0 +1,28 @@
+/*
+Bourbon docs: http://bourbon.io/
+Neat docs: http://neat.bourbon.io/
+Empties docs: http://empties.bourbon.io/
+*/
+$output-bourbon-deprecation-warnings: false !default;
+
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
+
+// Modules and Variables
+@import "base/variables";
+@import "modules/mixins";
+@import "modules/grid-settings";
+
+// Third-party
+@import "vendor/slick";
+@import "vendor/slick-theme";
+@import "vendor/fancybox";
+@import "vendor/burger";
+
+// Partials
+@import "partials/normalize";
+@import "base/base"; 
+@import "partials/styles"; // majority of styling
+@import "vendor/icomoon";
+
+@import "partials/print";

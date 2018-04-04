@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+// Font-face
+// @include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html, body, input, select, textarea {
+	color: $base-color;
+	font-size: 100%;
+} // html, body, input, select, textarea
+
+body {
+	font-size: $base-font-size;
+	font-family: $font-stack_default;
+	line-height: $base-line-height;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0;
+} // body
+
+h1, h2, h3, h4, h5, h6 {
+	color: $base-color;
+	font-family: $font-stack_brand;
+	font-weight: normal;
+	margin: $base-spacing 0 $base-spacing 0;
+	line-height: $heading-line-height;
+	&:first-child {
+		margin-top: 0;
+	}
+	/* Reduce margins when headers are grouped together */ 
+	& + h1, 
+	& + h2, 
+	& + h3, 
+	& + h4,
+	& + h5, 
+	& + h6 {
+		margin-top: -$base-spacing / 2;
+	}
+} //h1, h2, h3, h4, h5, h6
+
+h1 {
+	font-size: 3em;
+	@media only screen and (max-width: $breakpoint-smallish) {
+		font-size: 2em;
+	} // smallish
+} // h1
+
+h2 {
+	font-size: 2em;
+	@media only screen and (max-width: $breakpoint-smallish) {
+		font-size: 1.5em;
+	} // smallish
+} // h2
+
+h3 {
+	font-size: 1.5em;
+	@media only screen and (max-width: $breakpoint-smallish) {
+		font-size: 1.3em;
+	} // smallish
+} // h3
+
+h4 {
+	font-size: 1.3em;
+	@media only screen and (max-width: $breakpoint-smallish) {
+		font-size: 1.2em;
+	} // smallish
+} // h4
+
+h5 {
+	font-size: 1.2em;
+	@media only screen and (max-width: $breakpoint-smallish) {
+		font-size: 1em;
+	} // smallish
+} // h5
+
+h6 {
+	font-size: 1em;
+	margin-bottom: $small-spacing;
+	font-weight: bold;
+} // h6
+
+p, 
+ul, 
+ol {
+	font-size: 1em;
+	margin: 0 0 $small-spacing 0;
+}
+
+ul, ol {
+	font-size: $base-font-size;
+	margin-left: 20px;
+	margin-bottom: $small-spacing;
+	padding: 0;
+} // ul
+
+li {
+	margin: 0;
+	padding: 0;
+} // li
+
+dl {
+  margin-bottom: $small-spacing;
+
+  dt {
+    font-weight: bold;
+    margin-top: $small-spacing;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+
+a {
+  color: $action-color;
+  text-decoration: underline;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    text-decoration-color: #000000;
+  }
+
+  img {
+	border: none;
+  }
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $border-color;
+	margin: $base-spacing 0;
+	padding: 0;
+} // hr
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  &.left {
+  	float: left;
+  	margin: 0 10px 10px 0;
+  } // left
+  &.right {
+  	float: right;
+  	margin: 0 0 10px 10px;
+  } // left
+}
+
+blockquote, address {
+	margin: 0 0 $small-spacing 0;
+	padding: 0 $small-spacing 0 $small-spacing;
+	font-style: italic;
+	font-size: 1.2em;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	border-left: 5px solid #ccb676;
+} // blockquote, address
+
+code {
+	font-family: "Courier New", Courier, serif;
+	overflow: auto;
+	padding: 2px;
+	background: #fff;
+} // code
+
+pre code {
+	background: none;
+} // pre code
+
+pre {
+	margin: 0 0 20px;
+	padding: 10px;
+	background: #fff;
+	overflow: auto;
+	border: 1px solid #e4e4e4;
+} // pre
+
+i, em {
+	font-style: italic;
+} // i, em
