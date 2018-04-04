@@ -12,51 +12,7 @@
 									</li>
 	    						</ul> #}
 	    					</li>
-	    					<li role="presentation">
-	    						<a href="about.html" class="{%if activePage =='about' %}active{% endif %}" role="menuitem" tabindex="0">About</a>
-	    						{# <ul class="sub-nav">
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 2a</a>
-									</li>
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 2b</a>
-									</li>
-	    						</ul> #}
-	    					</li>
-                            <li role="presentation">
-	    						<a href="hello.html" class="{%if activePage =='hello' %}active{% endif %}" role="menuitem" tabindex="0">hello</a>
-	    						{# <ul class="sub-nav">
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 3a</a>
-									</li>
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 3b</a>
-									</li>
-	    						</ul> #}
-	    					</li>
-                            <li role="presentation">
-	    						<a href="work.html" class="{%if activePage =='work' %}active{% endif %}" role="menuitem" tabindex="0">Work</a>
-	    						{# <ul class="sub-nav">
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 3a</a>
-									</li>
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 3b</a>
-									</li>
-	    						</ul> #}
-	    					</li>
-
-	    					<li role="presentation">
-	    						<a href="contact.html"  class="{%if activePage =='contact' %}active{% endif %}" role="menuitem" tabindex="0">Contact</a>
-	    						{# <ul class="sub-nav">
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 3a</a>
-									</li>
-									<li role="presentation">
-										<a href="" role="menuitem" tabindex="0">Sub nav link 3b</a>
-									</li>
-	    						</ul> #}
-	    					</li>
+	    				
 	    			</ul>
 	    	</nav>
 

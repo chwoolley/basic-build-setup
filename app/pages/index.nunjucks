@@ -24,52 +24,8 @@
 
 
     <section>
-        	<div class="column-wrapper">
-
-                <div class="column-1of1">
-                        <h1>Different box types</h1>
-                        <div class="box1">
-                                <div class="box-inner1">
-                                    <p>lsdfdsfdsdsf</p>
-                                </div>
-
-                        </div>
-                        <div class="box2">
-                            <div class="box-inner2">
-                                <p>lsdfdsfdsdsf</p>
-                            </div>
-
-                        </div>
-                        <div class="box3">
-                            <div class="box-inner3">
-                                <p>lsdfdsfdsdsf</p>
-                            </div>
-                        </div>
-                        <div class="box4">
-                            <div class="box-inner4">
-
-                                <p>lsdfdsfdsdsf</p>
-                            </div>
-                        </div>
-                        <div class="box5">
-                            <div class="box-inner5">
-                                <p>lsdfdsfdsdsf</p>
-                            </div>
-                        </div>
-                        <div class="box6">
-                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
-                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
-                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
-                            <div class="box-inner6"><p>lsdfdsfdsdsf</p></div>
-                            <div class="box-inner6"><p>lets see if this works</p></div>
-                        </div>
-
-
-                </div>
-
-
-            </div>
-        </section>
+        
+    </section>
 
         {% include "partials/footer.nunjucks" %}
 {% endblock %}
