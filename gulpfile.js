@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data');
 var browserSync = require('browser-sync').create();
 
 function handleError (error){
